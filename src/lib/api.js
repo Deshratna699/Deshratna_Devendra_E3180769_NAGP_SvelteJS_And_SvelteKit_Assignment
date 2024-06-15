@@ -3,6 +3,7 @@ const API_URL = process.env.NODE_ENV === 'production' ? 'https://deshratna-deven
 export async function register(user) {
   const res = await fetch(`${API_URL}/register`, {
     method: 'POST',
+    mode: 'no-cors',
     body: JSON.stringify(user),
     headers: {
       'Content-Type': 'application/json'
@@ -15,6 +16,7 @@ export async function register(user) {
 export async function login(credentials) {
   const res = await fetch(`${API_URL}/login`, {
     method: 'POST',
+    mode: 'no-cors',
     body: JSON.stringify(credentials),
     headers: {
       'Content-Type': 'application/json'
@@ -35,6 +37,7 @@ export async function addTask(task) {
   const res = await fetch(`${API_URL}/tasks`, {
     method: 'POST',
     body: JSON.stringify(task),
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json'
     }
@@ -47,6 +50,7 @@ export async function updateTask(task) {
   const res = await fetch(`${API_URL}/tasks`, {
     method: 'PUT',
     body: JSON.stringify(task),
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json'
     }
@@ -59,6 +63,7 @@ export async function deleteTask(id) {
   const res = await fetch(`${API_URL}/tasks`, {
     method: 'DELETE',
     body: JSON.stringify({ id }),
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json'
     }
