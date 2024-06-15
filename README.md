@@ -43,7 +43,8 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/personal-task-manager.git
+    git clone  https://github.com/Deshratna699/Deshratna_Devendra_E3180769_NAGP_SvelteJS_And_SvelteKit_Assignment.git
+
     cd personal-task-manager
     ```
 
@@ -61,7 +62,7 @@ To start the development server:
 npm run dev
 ```
 
-Open your browser and navigate to `http://localhost:5000` to view the application.
+Open your browser and navigate to `localhost current running port` to view the application.
 
 ## Features
 
