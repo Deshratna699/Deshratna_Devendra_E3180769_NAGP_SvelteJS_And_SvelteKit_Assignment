@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5184/api';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-qv15dnj4g.vercel.app' : 'http://localhost:5184/api';
 
 export async function register(user) {
   const res = await fetch(`${API_URL}/register`, {
