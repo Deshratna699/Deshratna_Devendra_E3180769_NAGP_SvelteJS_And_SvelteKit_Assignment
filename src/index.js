@@ -1,18 +1,23 @@
-import { handler } from '@sveltejs/kit/node'; // Adjust import according to your setup
-import { createServer } from 'http';
-import { handle } from './middleware.js';
+const express = require('express');
+const cors = require('cors');
 
-const server = createServer(async (req, res) => {
-  try {
-    await handle({ request: req, resolve: handler });
-    handler(req, res);
-  } catch (err) {
-    res.statusCode = 500;
-    res.end('Internal Server Error');
-  }
-});
+const app = express();
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+// Configure CORS
+const corsOptions = {
+  origin: 'https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-ri8iz25ip.vercel.app',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+
+app.use(express.json());
+
+// Define your routes...
+
+const PORT = process.env.PORT || 5184;
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
