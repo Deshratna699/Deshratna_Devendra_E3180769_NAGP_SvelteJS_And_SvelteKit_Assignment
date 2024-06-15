@@ -8,7 +8,7 @@
 </script>
 
 <script>
-  export let
+  export let task; // Define the 'task' prop here
 </script>
 
 <h1>{task.title}</h1>
