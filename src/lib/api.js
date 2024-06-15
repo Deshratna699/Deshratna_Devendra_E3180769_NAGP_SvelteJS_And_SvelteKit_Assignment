@@ -1,4 +1,4 @@
-const API_URL = process.env.NODE_ENV === 'http://localhost:5184/api';
+const API_URL = 'http://localhost:5184/api';
 
 export async function register(user) {
   const res = await fetch(`${API_URL}/register`, {
