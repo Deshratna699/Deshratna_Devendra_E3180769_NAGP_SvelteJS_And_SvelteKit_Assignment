@@ -67,7 +67,7 @@ A sleek and efficient personal task manager application built with SvelteKit. Th
 
 2. **Open your browser:**
 
-   Navigate to [https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-gpl1n3jwz.vercel.app/about](https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-gpl1n3jwz.vercel.app/about) to see the application in action.
+   Navigate to [https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-gpl1n3jwz.vercel.app/about](https://deshratna-devendra-e3180769-nagp-svelte-js-and-svelt-gpl1n3jwz.vercel.app/) to see the application in action.
 
 ## Folder Structure
 
