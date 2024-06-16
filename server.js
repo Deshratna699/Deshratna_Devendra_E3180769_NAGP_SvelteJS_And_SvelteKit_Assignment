@@ -1,6 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5184;
+
+app.use(cors({ origin: 'http://localhost:5173/', credentials: true }));
+app.use(bodyParser.json());
 
 let tasks = [
   { id: 1, title: "Task 1", description: "Description 1", dueDate: "2023-12-31", category: "Work", priority: 1 },
@@ -29,6 +35,22 @@ app.get('/api/tasks/:id', (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+app.use(cors({ origin: 'http://localhost:5173/', credentials: true }));
+app.use(bodyParser.json());
+
+const users = {
+  'user@example.com': 'password', // Sample user for testing
+};
+
+app.post('/api/login', (req, res) => {
+  const { email, password } = req.body;
+  if (users[email] && users[email] === password) {
+    res.status(200).json({ token: 'fake-jwt-token', user: { email } });
+  } else {
+    res.status(401).json({ message: 'Invalid credentials' });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

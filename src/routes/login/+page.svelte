@@ -7,18 +7,19 @@
   let password = '';
 
   async function handleLogin() {
-    try {
-      const user = await login({ email, password });
-      localStorage.setItem('authToken', JSON.stringify(user));
-      authStore.set({
-        isAuthenticated: true,
-        user: user,
-      });
-      goto('/tasks');
-    } catch (error) {
-      console.error('Login failed', error);
+      try {
+        const user = await login({ email, password });
+        localStorage.setItem('authToken', JSON.stringify(user.token));
+        authStore.set({
+          isAuthenticated: true,
+          user: user,
+        });
+        goto('/tasks');
+      } catch (error) {
+        console.error('Login failed', error);
+        alert('Login failed: ' + error.message);
+      }
     }
-  }
 </script>
 
 <h1>Login</h1>

@@ -7,11 +7,11 @@ export const authStore = writable({
 
 export function loadAuthState() {
   if (typeof window !== 'undefined') { // Check if the code is running on the client side
-    const authData = JSON.parse(localStorage.getItem('authToken'));
-    if (authData) {
+    const authToken = JSON.parse(localStorage.getItem('authToken'));
+    if (authToken) {
       authStore.set({
         isAuthenticated: true,
-        user: authData,
+        user: authToken, // Adjust this based on what your authToken contains
       });
     }
   }
