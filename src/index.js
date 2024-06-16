@@ -15,9 +15,8 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 
-// Define your routes...
 
-const PORT = process.env.PORT || 5184;
+const PORT = process.env.PORT || 5173;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
