@@ -1,6 +1,6 @@
 # Personal Task Manager
 
-A personal task manager application built with SvelteKit, allowing users to register, log in, and manage their tasks. This application demonstrates authentication, task filtering, sorting, and mock API integration.
+A sleek and efficient personal task manager application built with SvelteKit. This app allows users to register, log in securely, and manage tasks effortlessly. It includes robust features such as task filtering, sorting, and integrates seamlessly with a mock API.
 
 ## Table of Contents
 
@@ -16,15 +16,15 @@ A personal task manager application built with SvelteKit, allowing users to regi
 
 ## Features
 
-- User Registration and Login
-- Task Management (Add, Edit, Delete)
-- Task Filtering by Category, Due Date, and Status
-- Task Sorting by Date and Priority
+- **User Registration and Login**: Secure authentication system to manage user accounts.
+- **Task Management**: Add, edit, and delete tasks with ease.
+- **Advanced Filtering**: Filter tasks by category, due date, and status.
+- **Intuitive Sorting**: Sort tasks by date and priority for better organization.
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/en/) (version 14 or higher)
-- [npm](https://www.npmjs.com/) (version 6 or higher) or [yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://npmjs.com/) or [yarn](https://yarnpkg.com/) (latest versions)
 
 ## Installation
 
